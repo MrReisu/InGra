@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtuelle Umgebung
+venv/
+.venv/
+env/
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+
+# Umgebungsvariablen
+.env
+
+# Scraper Output
+price_tracker.json
+*.json
+
+# Static Files
+staticfiles/
+
+# Distribution / Packaging
+dist/
+build/
+*.egg-info/
+
+# Tests
+.coverage
+htmlcov/
+.pytest_cache/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

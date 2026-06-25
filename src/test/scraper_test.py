@@ -22,7 +22,7 @@ print(f"Starte Request zu: {url}")
 response = requests.get(url, headers=headers, timeout=10)
 print(f"Response erhalten! Status: {response.status_code}")
 
-soup = BeautifulSoup(response.content, 'html.parser')
+soup = BeautifulSoup(response.content, 'lxml')
 print("HTML geparst mit BeautifulSoup")
 
 price_div = soup.find('div', class_='pprice')
