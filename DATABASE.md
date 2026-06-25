@@ -1,5 +1,7 @@
 # InGra – Datenbankkonzept
 
+Dieses Dokument wurde mit KI-Unterstützung (Anthropic Claude Sonnet 4.6 Mittel) erstellt und manuell überprüft.
+
 ## Struktur
 
 Das Datenbankschema ist in drei Bereiche aufgeteilt:
