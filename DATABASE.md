@@ -2,7 +2,7 @@
 
 ## Struktur
 
-Das Datenbankschema ist in vier Bereiche aufgeteilt:
+Das Datenbankschema ist in drei Bereiche aufgeteilt:
 
 - **Core** – Kategorien, Subkategorien und Produkte
 - **Preise** – Shops und Preisverlauf
