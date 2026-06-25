@@ -70,16 +70,19 @@ erDiagram
     gpu_specs {
         int id PK
         int product_id FK
-        int vram_gb
-        varchar vram_type
-        int memory_bus
-        int base_clock_mhz
-        int boost_clock_mhz
-        int tdp_watt
-        varchar pcie_version
-        varchar connectors
-        int length_mm
-        int cooling_slots
+        int vram_gb          %% Grafikspeicher in GB
+        varchar vram_type    %% Grafikspeichertyp
+        int vram_freq        %% Grafikspeicher Frequenz
+        int vram_bandwidth   %% Grafikspeicher Bandbreite
+        int memory_bus       %% Speicheranbindung
+        int base_clock       %% GPU Basistakt
+        int boost_clock      %% GPU Boosttakt
+        int tdp_watt         %% Stromverbrauch in Watt
+        varchar pcie_version %% Schnittstelle
+        varchar connectors   %% Stromanschlüsse
+        varchar ports        %% Displayanschlüsse
+        varchar abmessung    %% Maße der Karte (Länge x Breite x Höhe)
+        int slots            %% Anzahl der genutzten Slots
     }
 
     cpu_specs {
