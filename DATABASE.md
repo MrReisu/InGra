@@ -72,19 +72,32 @@ erDiagram
     gpu_specs {
         int id PK
         int product_id FK
-        int vram_gb          %% Grafikspeicher in GB
-        varchar vram_type    %% Grafikspeichertyp
-        int vram_freq        %% Grafikspeicher Frequenz
-        int vram_bandwidth   %% Grafikspeicher Bandbreite
-        int memory_bus       %% Speicheranbindung
-        int base_clock       %% GPU Basistakt
-        int boost_clock      %% GPU Boosttakt
-        int tdp_watt         %% Stromverbrauch in Watt
-        varchar pcie_version %% Schnittstelle
-        varchar connectors   %% Stromanschlüsse
-        varchar ports        %% Displayanschlüsse
-        varchar abmessung    %% Maße der Karte (Länge x Breite x Höhe)
-        int slots            %% Anzahl der genutzten Slots
+        %% Grafikspeicher in GB
+        int vram_gb
+        %% Grafikspeichertyp
+        varchar vram_type
+        %% Grafikspeicher Frequenz
+        int vram_freq
+        %% Grafikspeicher Bandbreite
+        int vram_bandwidth
+        %% Speicheranbindung
+        int memory_bus
+        %% GPU Basistakt
+        int base_clock
+        %% GPU Boosttakt
+        int boost_clock
+        %% Stromverbrauch in Watt
+        int tdp_watt
+        %% Schnittstelle
+        varchar pcie_version
+        %% Stromanschlüsse
+        varchar connectors
+        %% Displayanschlüsse
+        varchar ports
+        %% Maße der Karte (Länge x Breite x Höhe)
+        varchar abmessung
+        %% Anzahl der genutzten Slots
+        int slots
     }
 
     cpu_specs {
@@ -240,20 +253,20 @@ erDiagram
     category ||--o{ product : "hat"
     subcategory ||--o{ product : "hat"
 
-    product ||--|| gpu_specs : "hat"
-    product ||--|| cpu_specs : "hat"
-    product ||--|| mainboard_specs : "hat"
-    product ||--|| psu_specs : "hat"
-    product ||--|| ram_specs : "hat"
-    product ||--|| storage_specs : "hat"
-    product ||--|| air_cooler_specs : "hat"
-    product ||--|| case_fan_specs : "hat"
-    product ||--|| watercooling_cpu_specs : "hat"
-    product ||--|| aio_specs : "hat"
-    product ||--|| radiator_specs : "hat"
-    product ||--|| gpu_watercooling_specs : "hat"
-    product ||--|| fitting_specs : "hat"
-    product ||--|| tubing_specs : "hat"
+    product ||--o| gpu_specs : "hat"
+    product ||--o| cpu_specs : "hat"
+    product ||--o| mainboard_specs : "hat"
+    product ||--o| psu_specs : "hat"
+    product ||--o| ram_specs : "hat"
+    product ||--o| storage_specs : "hat"
+    product ||--o| air_cooler_specs : "hat"
+    product ||--o| case_fan_specs : "hat"
+    product ||--o| watercooling_cpu_specs : "hat"
+    product ||--o| aio_specs : "hat"
+    product ||--o| radiator_specs : "hat"
+    product ||--o| gpu_watercooling_specs : "hat"
+    product ||--o| fitting_specs : "hat"
+    product ||--o| tubing_specs : "hat"
 
     product ||--o{ price : "hat"
     shop ||--o{ price : "hat"
